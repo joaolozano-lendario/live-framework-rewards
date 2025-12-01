@@ -17,24 +17,23 @@ export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 pt-24 pb-16 bg-white-pure">
       <div className="max-w-4xl mx-auto text-center">
-        {/* Live Badge */}
+        {/* Author + Meta Combined */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex flex-wrap items-center justify-center gap-3 mb-8"
+          className="flex flex-col items-center gap-4 mb-10"
         >
-          <span className="px-4 py-2 bg-black-pure text-white text-sm font-semibold rounded-full">
-            Live #{meta.number}
-          </span>
-          <span className="px-4 py-2 bg-gray-100 text-gray-600 text-sm rounded-full">
-            {formatDate(meta.date)}
-          </span>
-          {meta.duration && (
-            <span className="px-4 py-2 bg-gray-100 text-gray-600 text-sm rounded-full">
-              {meta.duration}
-            </span>
-          )}
+          {/* Author */}
+          <div className="flex items-center gap-3">
+            <div className="w-14 h-14 bg-black-pure rounded-full flex items-center justify-center text-white font-bold text-xl">
+              AN
+            </div>
+            <div className="text-left">
+              <p className="font-bold text-black-pure text-lg">Alan Nicolas</p>
+              <p className="text-sm text-gray-500">Live Lendária #{meta.number} • {formatDate(meta.date)}</p>
+            </div>
+          </div>
         </motion.div>
 
         {/* Main Title - Live Title */}
@@ -42,7 +41,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-black-pure leading-tight mb-4"
+          className="text-2xl md:text-3xl lg:text-4xl font-bold text-black-pure leading-tight mb-4 max-w-3xl mx-auto"
         >
           "{meta.title}"
         </motion.h1>
@@ -52,7 +51,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-xl md:text-2xl text-gray-500 mb-8"
+          className="text-lg md:text-xl text-gray-500 mb-8"
         >
           {meta.theme}
         </motion.p>
