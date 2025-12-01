@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projetos Originais com IA | Live #043 - Academia Lendár[IA]</title>
+    <meta name="description" content="Framework completo para criar 'mansões' em vez de 'puxadinhos' usando IA. Da Live Lendária #043 com Alan Nicolas." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Projetos Originais com IA | Framework Visual" />
+    <meta property="og:description" content="Aprenda a criar sistemas completos com IA, não remendos. O segredo está na expressão, não na ferramenta." />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'white-pure': '#FFFFFF',
+              'white-soft': '#F8F8F8',
+              'gray-100': '#E8E8E8',
+              'gray-200': '#D8D8D8',
+              'gray-300': '#B8B8B8',
+              'gray-400': '#888888',
+              'gray-500': '#646464',
+              'gray-600': '#484848',
+              'gray-700': '#323232',
+              'black-soft': '#242424',
+              'black-deep': '#161616',
+              'black-pure': '#000000',
+            },
+            fontFamily: {
+              'inter': ['Inter', 'sans-serif'],
+              'serif': ['Source Serif Pro', 'serif'],
+            },
+            spacing: {
+              '18': '4.5rem',
+              '22': '5.5rem',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
